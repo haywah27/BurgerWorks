@@ -3,4 +3,18 @@
 // create router and export at end of file
 
 const express = require("express");
-const burger = require("../models/burger");
+const burg = require("../models/burger");
+var router = express.Router();
+
+router.get("/", function(req, res) {
+
+});
+
+
+router.get("/api/burgers", function(req, res) {
+
+});
+
+
+
+module.exports = router;
