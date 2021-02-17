@@ -3,7 +3,6 @@
 <h1>Burgers</h1>
 
 
-
 <h3>Haven't Eaten!</h3>
 <div id="not_eaten">
 
@@ -12,7 +11,7 @@
     {{#unless devoured}}
         <form action="/{{id}}" method="POST">
             <ul>
-                <li>{{id}}. {{burger_name}}</li><button id="devour-button" type="submit">Eat This Burger!</button>
+                <li>{{id}}. {{burger_name}}</li><button id="devour-button" type="submit">Eat!</button>
             </ul>
         </form>
     {{/unless}} 
@@ -44,7 +43,7 @@
     {{#if devoured}}
         <form action="/{{id}}" method="POST">
             <ul>
-                <li>{{id}}. {{burger_name}}</li><button id="devour-button" type="submit">Eat This Burger!</button>
+                <li>{{id}}. {{burger_name}}</li>
             </ul>
         </form>
     {{/if}} 
