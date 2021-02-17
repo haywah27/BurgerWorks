@@ -15,9 +15,18 @@ router.get("/", function(req, res) {
 });
 
 
-router.get("/api/burgers", function(req, res) {
+router.post("/", function(req, res) {
+    // console.log(typeof req.body.newBurger)
+    burg.insertOne(req.body.newBurger, function(){
+        res.redirect('/');
+    })
 
 });
+
+
+// router.get("/api/burgers", function(req, res) {
+
+// });
 
 
 module.exports = router;
