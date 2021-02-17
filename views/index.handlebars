@@ -2,25 +2,24 @@
 {{!-- create button to submit user input to database --}}
 <h1>Burgers</h1>
 
-<h3>List</h3>
 
-<div>
-    <h4>Haven't Eaten!</h4>
-    <div id="not_eaten">
 
-        {{!-- keep undevoured items on list ONLY --}}
-        {{#each burgers}} 
-        {{#unless devoured}}
-            <form action="/{{id}}" method="POST">
-                <ul>
-                    <li>{{id}}. {{burger_name}}</li><button id="devour-button" type="submit">Eat This Burger!</button>
-                </ul>
-            </form>
-        {{/unless}} 
-        {{/each}}
+<h3>Haven't Eaten!</h3>
+<div id="not_eaten">
 
-    </div>
+    {{!-- keep undevoured items on list ONLY --}}
+    {{#each burgers}} 
+    {{#unless devoured}}
+        <form action="/{{id}}" method="POST">
+            <ul>
+                <li>{{id}}. {{burger_name}}</li><button id="devour-button" type="submit">Eat This Burger!</button>
+            </ul>
+        </form>
+    {{/unless}} 
+    {{/each}}
+
 </div>
+
 
     {{!-- ///////// --}}
 
@@ -35,11 +34,21 @@
   </form>
 </div>
 
-{{!-- <ul>
-  {{#each burgers}}
-  	<li>
-  	   <p>ID: {{this.id}}</p>
-       <p>Burger Name: {{this.burger_name}}</p>
-  	</li>
-  {{/each}}
-</ul> --}}
+
+
+
+<h3>Have Eaten!</h3>
+<div id="eaten">
+
+    {{!-- keep devoured items on list ONLY --}}
+    {{#each burgers}} 
+    {{#if devoured}}
+        <form action="/{{id}}" method="POST">
+            <ul>
+                <li>{{id}}. {{burger_name}}</li><button id="devour-button" type="submit">Eat This Burger!</button>
+            </ul>
+        </form>
+    {{/if}} 
+    {{/each}}
+
+</div>
