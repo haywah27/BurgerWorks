@@ -7,6 +7,10 @@ const burg = require("../models/burger");
 var router = express.Router();
 
 router.get("/", function(req, res) {
+//    burg.selectAll(res);
+    console.log(res)
+    //   index is handlebars
+    //   res.render('index', { burgers: data });
 
 });
 
