@@ -24,9 +24,12 @@ router.post("/", function(req, res) {
 });
 
 
-// router.get("/api/burgers", function(req, res) {
 
-// });
+router.post("/:id", function(req, res) {
+    burg.updateOne(req.params.id, function(){
+        res.redirect('/');
+    });
+});
 
 
 module.exports = router;
