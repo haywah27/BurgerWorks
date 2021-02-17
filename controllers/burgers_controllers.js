@@ -32,4 +32,12 @@ router.post("/:id", function(req, res) {
 });
 
 
+router.get("/api/burgers", function(req, res) {
+    burg.selectAll(function(data){
+     res.json(data);
+    });
+
+ });
+
+
 module.exports = router;
