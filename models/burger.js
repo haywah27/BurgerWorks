@@ -1,5 +1,6 @@
 const orm = require("../config/orm");
 
+// will call orm functions using different burger info for variables
 const burg = {
     selectAll: function (cb) {
         orm.selectAll(function (res) {
