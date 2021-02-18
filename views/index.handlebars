@@ -1,9 +1,9 @@
 {{!-- setup to have the template that Handlebars can render onto --}}
 {{!-- create button to submit user input to database --}}
-<h1>Burgers</h1>
 
 
-<h3>Haven't Eaten!</h3>
+
+<h3 class= "title is-2">Haven't Eaten!</h3>
 <div id="not_eaten">
 
     {{!-- keep undevoured items on list ONLY --}}
@@ -24,18 +24,12 @@
 
 
 
-<div>
-  <form action="/" method="POST">
-  	<textarea type="text" name="newBurger"></textarea>
 
-  	<button type="submit">Submit</button>
-  </form>
-</div>
 
 
   {{!-- //////////////////////////////////// --}}
 
-<h3>Have Eaten!</h3>
+<h3 class= "title is-2">Have Eaten!</h3>
 <div id="eaten">
 
     {{!-- keep devoured items on list ONLY --}}
