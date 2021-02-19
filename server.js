@@ -5,6 +5,8 @@ const exphbs = require('express-handlebars');
 
 const app = express();
 
+app.use(express.static("public"));
+
 const PORT = process.env.PORT || 8080;
 
 app.use(express.urlencoded({ extended: true }));
@@ -17,8 +19,6 @@ app.set("view engine", "handlebars");
 // import routes from controller
 const router = require("./controllers/burgers_controllers")
 app.use(router);
-
-
 
 // connect to local host PORT
 app.listen(PORT, () => {

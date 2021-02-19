@@ -2,45 +2,66 @@
 {{!-- create button to submit user input to database --}}
 
 
+<div class="container">
+<div class="columns is-centered has-text-centered is-mobile">
+    <div class="column is-half is-mobile ">
+       <div class="card">
+           <div class="card-content content is-medium">
+                <h3 class= "title is-2">Haven't Eaten!</h3>
+                <div id="not_eaten">
 
-<h3 class= "title is-2">Haven't Eaten!</h3>
-<div id="not_eaten">
+                    {{!-- keep undevoured items on list ONLY --}}
+                    {{#each burgers}} 
+                    {{#unless devoured}}
+                        <form action="/{{id}}" method="POST">
+                            <dl class="">
+                                <div class="box level has-text-centered">
+                                    <dt>{{id}}. {{burger_name}}</dt><button id="devour-button" class="button is-primary is-medium" type="submit">Eat!</button>
+                                </div>
+                            </dl>
+                        </form>
+                    {{/unless}} 
+                    {{/each}}
 
-    {{!-- keep undevoured items on list ONLY --}}
-    {{#each burgers}} 
-    {{#unless devoured}}
-        <form action="/{{id}}" method="POST">
-            <ul>
-                <li>{{id}}. {{burger_name}}</li><button id="devour-button" type="submit">Eat!</button>
-            </ul>
-        </form>
-    {{/unless}} 
-    {{/each}}
+                </div>      
+            </div>
+        </div>
+    </div>
 
+    <div class="column is-half is-mobile ">
+         <div class="card">
+           <div class="card-content content is-medium">
+                <h3 class= "title is-2">Have Eaten!</h3>
+                
+                <div class="eaten ">
+
+                    {{!-- keep devoured items on list ONLY --}}
+                    {{#each burgers}} 
+                    {{#if devoured}}
+                        <form action="/{{id}}" method="POST">
+                            <dl>
+                                <div class="box">
+                                    <dt>{{id}}. {{burger_name}}</dt>
+                                </div>
+                                
+                            </dl>
+                        </form>
+                    {{/if}} 
+                    {{/each}}
+
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>
 </div>
 
 
-    {{!-- //////////////////////////////////// --}}
-
-
-
-
-
-
-  {{!-- //////////////////////////////////// --}}
-
-<h3 class= "title is-2">Have Eaten!</h3>
-<div id="eaten">
-
-    {{!-- keep devoured items on list ONLY --}}
-    {{#each burgers}} 
-    {{#if devoured}}
-        <form action="/{{id}}" method="POST">
-            <ul>
-                <li>{{id}}. {{burger_name}}</li>
-            </ul>
-        </form>
-    {{/if}} 
-    {{/each}}
-
+<div class="field is-grouped is-grouped-centered">
+  <p class="control">
+    <a class="button is-primary">
+      Submit
+    </a>
+  </p>
 </div>

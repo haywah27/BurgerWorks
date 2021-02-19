@@ -6,42 +6,56 @@
 	<meta charset="UTF-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css"/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
 	<title>BurgerWorks</title>
 </head>
 <body>
 
-
-
-
-<section class="section has-text-centered">
-  		<div class="container">
-  <div class="notification is-primary">
-    <h1 class="title is-1">BurgerWorks</h1>
-  </div>
-</div>
-</section>
+	{{!-- title header --}}
+	<section class="section has-text-centered">
+		<div class="container">
+			<div class="notification is-primary burgerHeader">
+				<h1 class="title is-1">BurgerWorks</h1>
+			</div>
+		</div>
+	</section>
 	
 
 	{{!-- posted burger data --}}
 	{{{ body }}}
 
 
+	{{!-- empty section to space page out --}}
+	<section class="section has-text-centered">
+		<div class="container">
+			
+		</div>
+	</section>
+
+	
 	{{!-- submit field and button --}}
 	<form action="/" method="POST">
-		<div class="columns is-centered is-mobile">
-			<div class="column is-half is-mobile ">
-				<textarea class="textarea is-large" name="newBurger"></textarea>
+		<div class="columns is-centered ">
+			<div class="column is-half">
+				<textarea class="textarea is-large inputBox" name="newBurger"></textarea>
 			</div>
 		</div>
 
 		<div class="field is-grouped is-grouped-centered">
 			<p class="control">
-				<button class="button is-info" type="submit">Submit</button>
+				<button class="button is-primary is-large buttonClear" type="submit">Submit</button>
 			</p>
 		</div>
 
 	</form>
+
+
+
+	{{!-- empty footer to space page out --}}
+	<section class="section has-text-centered">
+		<div class="container"></div>
+	</section>
 
 </body>
 </html>
