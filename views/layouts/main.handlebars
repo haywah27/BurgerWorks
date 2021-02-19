@@ -8,6 +8,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="/assets/css/burger_style.css" type="text/css"/>
 	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.1/css/bulma.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 	<title>BurgerWorks</title>
 </head>
 <body>
@@ -15,41 +16,37 @@
 	{{!-- title header --}}
 	<section class="section has-text-centered">
 		<div class="container">
-			<div class="notification is-primary burgerHeader">
+			<div class="notification burgerHeader">
 				<h1 class="title is-1">BurgerWorks</h1>
+				<i class="fas fa-hamburger fa-7x"></i>
 			</div>
+			
 		</div>
 	</section>
-	
+
 
 	{{!-- posted burger data --}}
 	{{{ body }}}
 
 
-	{{!-- empty section to space page out --}}
-	<section class="section has-text-centered">
-		<div class="container">
-			
-		</div>
-	</section>
+	{{!-- empty container to space page out --}}
+	<div class="container containerSpacer"></div>
 
-	
+
 	{{!-- submit field and button --}}
 	<form action="/" method="POST">
 		<div class="columns is-centered ">
 			<div class="column is-half">
-				<textarea class="textarea is-large inputBox" name="newBurger"></textarea>
+				<textarea class="textarea is-large submitBox" name="newBurger" placeholder="Enter any burger here!"></textarea>
 			</div>
 		</div>
 
 		<div class="field is-grouped is-grouped-centered">
 			<p class="control">
-				<button class="button is-primary is-large buttonClear" type="submit">Submit</button>
+				<button class="button is-large submitButton" type="submit">Submit</button>
 			</p>
 		</div>
-
 	</form>
-
 
 
 	{{!-- empty footer to space page out --}}

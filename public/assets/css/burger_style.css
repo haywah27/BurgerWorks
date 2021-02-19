@@ -1,12 +1,39 @@
 body {
-    background-color: #435764!important;
+    background-color: #D7DED8!important;
 }
 
 .burgerHeader{
-    background-color: #C98380!important;
-    color: #435764!important;
+    background-color: #778B91!important;
+    color: 	#EFD9D9!important;
+}
+
+
+.listItem{
+    background-color: grey!important;
+    border-color: #435764!important;
+    color: #e1e9b7!important;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
 }
 
 #devour-button{
+    background-color: #DED0CC;
     color: #435764!important;
+}
+
+.containerSpacer{
+    height: 1.5rem!important;
+}
+
+.submitBox{
+    min-height: 6rem!important;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%)!important;
+}
+
+.submitButton{
+    background-color: #778B91!important;
+    color: #e1e9b7!important;
+    border-color: #bcd2d0!important;
+    box-shadow: 0 0.5em 1em -0.125em rgb(10 10 10 / 10%), 0 0 0 1px rgb(10 10 10 / 2%)!important;
+    
 }

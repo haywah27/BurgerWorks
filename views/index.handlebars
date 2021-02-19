@@ -3,65 +3,59 @@
 
 
 <div class="container">
-<div class="columns is-centered has-text-centered is-mobile">
-    <div class="column is-half is-mobile ">
-       <div class="card">
-           <div class="card-content content is-medium">
-                <h3 class= "title is-2">Haven't Eaten!</h3>
-                <div id="not_eaten">
 
-                    {{!-- keep undevoured items on list ONLY --}}
-                    {{#each burgers}} 
-                    {{#unless devoured}}
-                        <form action="/{{id}}" method="POST">
-                            <dl class="">
-                                <div class="box level has-text-centered">
-                                    <dt>{{id}}. {{burger_name}}</dt><button id="devour-button" class="button is-primary is-medium" type="submit">Eat!</button>
-                                </div>
-                            </dl>
-                        </form>
-                    {{/unless}} 
-                    {{/each}}
+    {{!-- have not eaten list --}}
+    <div class="columns is-centered has-text-centered is-mobile">
+        <div class="column is-half is-mobile ">
+        <div class="card">
+            <div class="card-content content is-medium">
+                    <h3 class= "title is-2">Burgers to try:</h3>
+                    <div id="not_eaten">
 
-                </div>      
-            </div>
-        </div>
-    </div>
+                        {{!-- keep undevoured items on list ONLY --}}
+                        {{#each burgers}} 
+                        {{#unless devoured}}
+                            <form action="/{{id}}" method="POST">
+                                <dl class="">
+                                    <div class="box level has-text-centered listItem">
+                                        <dt>{{id}}. {{burger_name}}</dt><button id="devour-button" class="button is-primary is-medium" type="submit">Eat!</button>
+                                    </div>
+                                </dl>
+                            </form>
+                        {{/unless}} 
+                        {{/each}}
 
-    <div class="column is-half is-mobile ">
-         <div class="card">
-           <div class="card-content content is-medium">
-                <h3 class= "title is-2">Have Eaten!</h3>
-                
-                <div class="eaten ">
-
-                    {{!-- keep devoured items on list ONLY --}}
-                    {{#each burgers}} 
-                    {{#if devoured}}
-                        <form action="/{{id}}" method="POST">
-                            <dl>
-                                <div class="box">
-                                    <dt>{{id}}. {{burger_name}}</dt>
-                                </div>
-                                
-                            </dl>
-                        </form>
-                    {{/if}} 
-                    {{/each}}
-
+                    </div>      
                 </div>
-              
+            </div>
+        </div>
+
+
+        {{!-- have eaten list --}}
+        <div class="column is-half is-mobile ">
+            <div class="card">
+            <div class="card-content content is-medium">
+                    <h3 class= "title is-2">Devoured Burgers:</h3>
+                    
+                    <div class="eaten ">
+
+                        {{!-- keep devoured items on list ONLY --}}
+                        {{#each burgers}} 
+                        {{#if devoured}}
+                            <form action="/{{id}}" method="POST">
+                                <dl>
+                                    <div class="box listItem">
+                                        <dt >{{id}}. {{burger_name}}</dt>
+                                    </div>
+                                    
+                                </dl>
+                            </form>
+                        {{/if}} 
+                        {{/each}}
+
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
-
-
-<div class="field is-grouped is-grouped-centered">
-  <p class="control">
-    <a class="button is-primary">
-      Submit
-    </a>
-  </p>
 </div>
