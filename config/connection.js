@@ -2,13 +2,13 @@ const mysql = require('mysql');
 
 let connection;
 // = mysql.createConnection({
-//     host: 'localhost',
+//     host: 'd6rii63wp64rsfb5.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
 //     port: 3306,
-//     user: 'root',
+//     user: 'c1yq4ps7yo51mfwt',
   
 //     // Be sure to update with your own MySQL password!
-//     password: 'yourRootPassword',
-//     database: 'burgers_db',
+//     password: 'fkz0hn623xdpd25p',
+//     database: 'l68vbvbw1q628ee8',
 //   });
 
 if(process.env.JAWSDB_URL){
